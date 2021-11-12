@@ -1,0 +1,15 @@
+<div class="top-menu">
+  <h2 id="text">Listado de Vacunas</h2>
+</div>
+<div class="center">
+    <button (click)="atras()" class="button style=">Volver</button>
+  </div>
+
+  <div class="students">
+    <!-- SELECTOR DE COURSE-CARD.COMPONENT.TS -->
+    <app-student-card *ngFor="let student of students; index as i"
+      [student]="student" [index]="i">
+    </app-student-card>
+</div>
+
+

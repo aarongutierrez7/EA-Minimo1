@@ -1,0 +1,19 @@
+<div class="top-menu">
+  <h2 id="text">Listado de Personas</h2>
+</div>
+
+<div class="center">
+  <button (click)="addSubject()" class="button style=" >Nueva persona</button>
+  <button (click)="listStudents()" class="button">Lista de vacunas</button>
+</div>
+
+
+<div class="subjects">
+    <!-- SELECTOR DE COURSE-CARD.COMPONENT.TS -->
+    <app-subject-card *ngFor="let subject of subjects; index as i"
+      [subject]="subject" [subjectIndex]="i">
+    </app-subject-card>
+
+</div>
+
+

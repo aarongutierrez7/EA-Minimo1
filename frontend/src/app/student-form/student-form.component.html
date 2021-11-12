@@ -1,0 +1,35 @@
+<div class="login">
+    <h2 class="login-header">New Vaccine</h2>
+    <form [formGroup]="studentForm" class="login-container" (ngSubmit)="submitStudent()">
+      <input type="name" placeholder="Name*" formControlName="name" />
+      <ng-container
+        *ngIf="!formControls.name.valid &&formControls.name.touched"
+      >
+        <p *ngIf="formControls.name.errors.required">
+          Name is required
+        </p>
+      </ng-container>
+
+      <input type="description" placeholder="Description" formControlName="description" />
+
+
+      <input type="technologie" placeholder="Technologie *" formControlName="technologie" />
+      <ng-container
+        *ngIf="!formControls.technologie.valid &&formControls.technologie.touched"
+      >
+        <p *ngIf="formControls.technologie.errors.required">
+          Technologie is required
+        </p>
+      </ng-container>
+
+      <input type="string" placeholder="DD/MM/YYYY" formControlName="date" />
+      <ng-container
+        *ngIf="formControls.date.touched"
+      >
+      </ng-container>
+
+      <p>
+        <input type="submit" value="Submit" [disabled]="studentForm.invalid" />
+      </p>
+    </form>
+  </div>
